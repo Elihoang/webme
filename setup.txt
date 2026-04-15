@@ -1,0 +1,26 @@
+============================================
+SETUP LỆNH - CHẠY TỪNG CÁI MỘT TRONG TERMINAL
+Thư mục: c:\HocTap\WebMe
+============================================
+
+BƯỚC 1 - Tạo project Vite + React:
+-----------------------------------
+npm create vite@latest . -- --template react
+
+(Nếu hỏi "Remove existing files and continue?" → nhấn Y)
+
+BƯỚC 2 - Cài dependencies:
+-----------------------------------
+npm install
+
+BƯỚC 3 - Cài Ant Design + Icons + Router:
+-----------------------------------
+npm install antd @ant-design/icons react-router-dom
+
+BƯỚC 4 - Chạy dev để test thử:
+-----------------------------------
+npm run dev
+
+============================================
+Sau khi chạy xong hết → báo lại để mình code tiếp nha!
+============================================

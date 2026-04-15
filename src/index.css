@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #1e293b;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ant Design overrides */
+.ant-layout {
+  background: transparent !important;
+}
+
+.ant-menu-horizontal {
+  line-height: 64px !important;
+}
+
+/* Force green color for selected/active menu items */
+.ant-menu-light .ant-menu-item-selected,
+.ant-menu-light .ant-menu-item-selected .ant-menu-title-content,
+.ant-menu-light .ant-menu-item-selected .anticon,
+.ant-menu-light > .ant-menu-item-selected,
+.ant-menu-light > .ant-menu-item-active {
+  color: #10b981 !important;
+}
+
+.ant-menu-light .ant-menu-item:hover,
+.ant-menu-light .ant-menu-item:hover .anticon,
+.ant-menu-light .ant-menu-item:hover .ant-menu-title-content {
+  color: #10b981 !important;
+}
+
+/* Active underline bar */
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected::after,
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item:hover::after {
+  border-bottom-color: #10b981 !important;
+}
+
+/* Remove ALL colored backgrounds from menu items */
+.ant-menu-light .ant-menu-item-selected,
+.ant-menu-light .ant-menu-item:hover,
+.ant-menu-light .ant-menu-item-active,
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected,
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item:hover {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Custom Utilities */
+.glass-panel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.gradient-text-primary {
+  color: #10b981;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; opacity: 0; }
+.delay-200 { animation-delay: 0.2s; opacity: 0; }
+.delay-300 { animation-delay: 0.3s; opacity: 0; }
+
+/* --- DARK MODE OVERRIDES --- */
+body.dark-mode .glass-panel {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Force override inline text colors in dark mode */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6,
+body.dark-mode .ant-typography {
+  color: #f8fafc !important;
+}
+
+body.dark-mode p, 
+body.dark-mode span, 
+body.dark-mode li {
+  color: #cbd5e1 !important;
+}
+
+/* Exempt specific spans that need to keep their color, like the gradient text or colored badges */
+body.dark-mode .gradient-text-primary {
+  color: #10b981 !important;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.custom-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: #d1fae5;
+  color: #059669 !important;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  border: 1px solid #a7f3d0;
+}
+
+body.dark-mode .custom-badge {
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Exempt ant tags from span color overrides */
+body.dark-mode .ant-tag {
+  color: unset !important;
+}
+
+/* Fix input fields and textareas in dark mode */
+body.dark-mode .ant-input,
+body.dark-mode .ant-input-affix-wrapper,
+body.dark-mode .ant-input-password {
+  background: #0f172a !important;
+  border-color: #334155 !important;
+  color: #f8fafc !important;
+}
+
+body.dark-mode .ant-input::placeholder {
+  color: #64748b !important;
+}

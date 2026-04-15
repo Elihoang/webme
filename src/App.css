@@ -1,0 +1,19 @@
+/* Custom app styles, primarily layout helpers */
+
+.glass-header .ant-menu-item {
+  border-radius: 8px;
+  margin: 0 4px;
+}
+
+.glass-header .ant-menu-item-selected {
+  background-color: rgba(167, 139, 250, 0.15) !important;
+  color: #a78bfa !important;
+}
+
+/* Page containers */
+.page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
+}
